@@ -3,7 +3,7 @@
 
   #### _This program defines words using ruby routes for this weeks code review on routes_
 
-  #### By _**name**_
+  #### By _**Bryon Burke**_
 
   ## Description
 
