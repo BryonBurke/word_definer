@@ -1,7 +1,7 @@
 
   # _Word Definer_
 
-  #### _This program defines words using ruby routes _
+  #### _This program defines words using ruby routes for this weeks code review_
 
   #### By _**name**_
 
