@@ -1,13 +1,17 @@
+require 'rspec'
+require 'album'
+require 'song'
+require 'pry'
 
-    require('rspec')
-    require('Word Definer')
+describe '#Word' do
 
-    describe(word) do
-    describe('#my_method') do
-      it('test') do
-        test = word.new()
-        expect(test.my_method()).to(eq('test'))
-      end
+  # before(:each) do
+  #   Album.clear
+  #   Song.clear
+  # end
+
+  describe('.all') do
+    it("returns an empty array when there are no words") do
+      expect(Word.all).to(eq([]))
     end
   end
-  
