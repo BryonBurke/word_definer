@@ -1,7 +1,7 @@
 
   # _Word Definer_
 
-  #### _short description _
+  #### _This program defines words using ruby routes _
 
   #### By _**name**_
 
@@ -44,4 +44,3 @@
   *Licensed under MIT license*
 
   Copyright (c) 2019 **_name_**
-  
