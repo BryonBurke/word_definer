@@ -43,4 +43,4 @@
 
   *Licensed under MIT license*
 
-  Copyright (c) 2019 **_name_**
+  Copyright (c) 2019 **_Bryon Burke_**
