@@ -1,38 +1,41 @@
 require('sinatra')
     require('sinatra/reloader')
-    require('./lib/Word Definer')
+    require('./lib/words')
     also_reload('lib/**/*.rb')
     get('/') do
+      "This is the home page"
 
     end
-    get('/Word Definer') do
-
-    end
-
-    get('/Word Definer/new') do
+    get('/words') do
+      "This route will show a list of words"
 
     end
 
-    get('/Word Definer/:id') do
-
-    end
-    post('/Word Definer') do
-
-    end
-
-    get('/Word Definer/:id/edit') do
+    get('/words/new') do
+      "This route will add a new word"
 
     end
 
-    patch('/Word Definer/:id') do
-
-    end
-
-    delete('/Word Definer/:id') do
-
-    end
-
-    get('/custom_route') do
-
-    end
-    
+    # get('/words/:id') do
+    #
+    # end
+    # post('/words') do
+    #
+    # end
+    #
+    # get('/words/:id/edit') do
+    #
+    # end
+    #
+    # patch('/words/:id') do
+    #
+    # end
+    #
+    # delete('/words/:id') do
+    #
+    # end
+    #
+    # get('/custom_route') do
+    #
+    # end
+    # 
