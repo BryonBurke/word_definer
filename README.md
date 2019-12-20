@@ -28,7 +28,7 @@
 
   ## Known Bugs
 
-  _No known bugs_
+  __
 
   ## Support and contact details
 
