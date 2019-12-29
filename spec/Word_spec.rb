@@ -1,6 +1,5 @@
 require 'rspec'
-require 'album'
-require 'song'
+require 'word'
 require 'pry'
 
 describe '#Word' do
@@ -10,3 +9,5 @@ describe '#Word' do
       expect(Word.all).to(eq([]))
     end
   end
+
+end
