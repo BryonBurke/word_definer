@@ -32,7 +32,7 @@
 
   ## Support and contact details
 
-  _If you have any issues with the program or want to reach out, email ['mwells1286@gmail.com](href='mailto:email@email.com')_
+  _Contact bryonparis@gmail.com for support
 
   ## Technologies Used
 
