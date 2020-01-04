@@ -1,0 +1,10 @@
+<h1>Delete <%=@word.name() %></h1>
+
+
+
+<form action="/words/<%= @word.id() %>" method="post">
+  <input name="_method" type="hidden" value="delete">
+
+  <button type="submit">Delete word</button>
+</form>
+<p><a href="/words">Return to word list</a></p>
