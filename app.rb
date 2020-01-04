@@ -7,36 +7,85 @@ gem('sinatra-contrib')
 also_reload('lib/**/*.rb')
 
 
-    get('/') do
+get('/') do
+  redirect to('/words')
+end
 
-    end
-    get('/Word Definer') do
+get('/words') do
+  @words = Word.sort
+  @words_sold = Word.all_sold
+  erb(:words)
+end
 
-    end
+get('/words/search') do
+  user_search = params[:search]
+  @search = Word.search(user_search)
+  erb(:search)
+end
 
-    get('/Word Definer/new') do
 
-    end
+get ('/words/new') do
+  erb(:new_word)
+end
 
-    get('/Word Definer/:id') do
+post ('/words') do
+  name = params[:word_name]
+  word = Word.new({:name => name, :id => nil})
+  word.save()
+  redirect to('/words')
+end
 
-    end
-    post('/Word Definer') do
+get ('/words/:id') do
+  @word = Word.find(params[:id].to_i())
+  erb(:word)
+end
 
-    end
+get ('/words/:id/edit') do
+  @word = Word.find(params[:id].to_i())
+  erb(:edit_word)
+end
 
-    get('/Word Definer/:id/edit') do
+patch ('/words/:id') do
+  @word = Word.find(params[:id].to_i())
+  @word.update(params[:name])
+  redirect to('/words')
+end
 
-    end
+get ('/words/:id/buy') do
 
-    patch('/Word Definer/:id') do
+    @word = Word.find(params[:id].to_i())
+    @word.sold
+    redirect to('/words')
+end
 
-    end
+delete ('/words/:id') do
+  @word = Word.find(params[:id].to_i())
+  @word.delete()
+  redirect to('/words')
+end
 
-    delete('/Word Definer/:id') do
+get ('/words/:id/definitions/:definition_id') do
+  @definition = Definition.find(params[:definition_id].to_i())
+  erb(:definition)
+end
 
-    end
+post ('/words/:id/definitions') do
+  @word = Word.find(params[:id].to_i())
+  definition = Definition.new({:name => params[:definition_name], :word_id => @word.id, :id => nil})
+  definition.save()
+  erb(:word)
+end
 
-    get('/custom_route') do
+patch ('/words/:id/definitions/:definition_id') do
+  @word = Word.find(params[:id].to_i())
+  definition = Definition.find(params[:definition_id].to_i())
+  definition.update(params[:name], @word.id, params[:artist_name], params[:year_recorded])
+  erb(:word)
+end
 
-    end
+delete ('/words/:id/definitions/:definition_id') do
+  definition = Definition.find(params[:definition_id].to_i())
+  definition.delete
+  @word = Word.find(params[:id].to_i())
+  erb(:word)
+end
