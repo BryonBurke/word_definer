@@ -1,6 +1,6 @@
 class Definition
   attr_reader :id
-  attr_accessor :name, :word_id, :id
+  attr_accessor :name, :word_id
 
   @@definitions = {}
   @@total_rows = 0
@@ -20,7 +20,7 @@ class Definition
   end
 
   def save
-    @@definitions[self.id] = Definition.new({:name => @name, :word_id => @word_id, :id => @id})
+    @@definitions[self.id] = Definition.new({:name => self.name, :word_id => self.word_id, :id => self.id})
   end
 
   def self.find(id)
@@ -30,7 +30,7 @@ class Definition
   def update(name, word_id)
     self.name = name
     self.word_id = word_id
-    @@definitions[self.id] = Definition.new({:name => @name, :word_id => @word_id})
+    @@definitions[self.id] = Definition.new({:name => self.name, :word_id => self.word_id, :id => self.id})
   end
 
   def delete
@@ -41,10 +41,10 @@ class Definition
     @@definitions = {}
   end
 
-  def self.find_by_word(wrd_id)
+  def self.find_by_word(alb_id)
     definitions = []
     @@definitions.values.each do |definition|
-      if definition.word_id == wrd_id
+      if definition.word_id == alb_id
         definitions.push(definition)
       end
     end
