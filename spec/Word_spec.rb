@@ -81,17 +81,6 @@ describe '#Word' do
     end
   end
 
-  describe('.search') do
-    it("searches for an word by name") do
-      word = Word.new({:name => " catfish", :id => nil})
-      word.save()
-      word2 = Word.new({:name => "hushpuppies", :id => nil})
-      word2.save()
-      word3 = Word.new({:name => "hushpuppiess clues", :id => nil})
-      word3.save()
-      expect(Word.search("blue")).to(eq([word2, word3]))
-    end
-  end
 
   describe('.sort') do
     it("sorts words by name") do
@@ -101,7 +90,7 @@ describe '#Word' do
       word2.save()
       word3 = Word.new({:name => "cole slaw", :id => nil})
       word3.save()
-      expect(Word.sort()).to(eq([word2, word, word3]))
+      expect(Word.sort()).to(eq([word2, word3, word]))
     end
   end
 
