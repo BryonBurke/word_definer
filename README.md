@@ -11,9 +11,11 @@
 
   |Behavior|Input|Output|
   |---|---|---|
-  |   |   |   |
-  |   |   |   |
-  |   |   |   |
+  | returns an empty array when there are no words | cleared hash | empty Word.all array  |
+  | saves a word  | catfish hushpuppies | catfish hushpuppies  |
+  |  updates an word by id | catfish | catfish |
+  | deletes an word by id  |  catfish hushpuppies | hushpuppies  |
+  | returns a word's definitions  |  catfish  |  a big fish that lives in the river  |
 
   ## Setup/Installation Requirements
 
@@ -43,6 +45,6 @@
 
   *Licensed under MIT license*
 
-  Heroku link:  https://pure-wildwood-65598.herokuapp.com/
+  Heroku link:  https://damp-lake-01995.herokuapp.com/
 
   Copyright (c) 2019 **_Bryon Burke_**

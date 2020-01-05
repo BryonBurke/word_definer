@@ -40,7 +40,7 @@ describe '#Word' do
 
 
   describe('.find') do
-    it("finds an word by id") do
+    it("finds a word by id") do
       word = Word.new({:name => "catfiesh", :id => nil})
       word.save()
       word2 = Word.new({:name => "hushpuppies", :id => nil})
@@ -50,7 +50,7 @@ describe '#Word' do
   end
 
   describe('#update') do
-    it("updates an word by id") do
+    it("updates a word by id") do
       word = Word.new({:name => " catfish", :id => nil})
       word.save()
       word.update(" catfish")
@@ -59,7 +59,7 @@ describe '#Word' do
   end
 
   describe('#delete') do
-    it("deletes an word by id") do
+    it("deletes a word by id") do
       word = Word.new({:name => " catfish", :id => nil})
       word.save()
       word2 = Word.new({:name => "hushpuppies", :id => nil})
@@ -70,7 +70,7 @@ describe '#Word' do
   end
 
   describe('#definitions') do
-    it("returns an word's definitions") do
+    it("returns a word's definitions") do
       word = Word.new({:name => " catfish", :id => nil})
       word.save()
       definition = Definition.new({:name => "a big fish that lives in the river", :word_id => word.id, :id => nil})
