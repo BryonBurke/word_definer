@@ -1,4 +1,13 @@
-<h1>Delete <%=@word.name() %></h1>
+<h1>Edit/Delete <%=@word.name() %></h1>
+
+<form action="/words/<%= @word.id() %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+
+  <label for="name">Rename word</label>
+  <input id="name" name="name" type="text">
+
+  <button type="submit">Update</button>
+</form>
 
 
 
