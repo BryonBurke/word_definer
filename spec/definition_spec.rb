@@ -1,6 +1,6 @@
 require 'rspec'
-require 'definition'
 require 'word'
+require 'definition'
 require 'pry'
 
 
