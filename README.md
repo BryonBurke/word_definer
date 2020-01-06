@@ -33,7 +33,7 @@
 
   ## Known Bugs
 
-  _There are no known bugs
+  _There are no known bugs at this time
 
   ## Support and contact details
 
