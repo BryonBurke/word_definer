@@ -21,12 +21,13 @@
 
   ## Setup/Installation Requirements
 
-  * _Launch <https://url.io/(---------)> in your browser._
+  * _Launch <https://damp-lake-01995.herokuapp.com/> in your browser._
   ### OR ###
   * clone and open the file locally
   * _in terminal run:_
-  >$git clone https://url/(------).git
-  * _open index.html in your browser._
+  >$git clone https://github.com/BryonBurke/word_definer
+  >$bundle
+  >$ruby app.rb
 
 
 
