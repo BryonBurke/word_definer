@@ -15,7 +15,9 @@
   | saves a word  | catfish hushpuppies | catfish hushpuppies  |
   |  updates an word by id | catfish | catfish |
   | deletes an word by id  |  catfish hushpuppies | hushpuppies  |
-  | returns a word's definitions  |  catfish  |  a big fish that lives in the river  |
+  | returns a word's definitions  |  catfish  |  a big fish that lives in the river  | returns a list of all definitions | horse | four legs and a mane  slower than a car |
+  | updates an definition by id | four legs and a mane | large mammal |
+  | deletes an definition by id | four legs and a mane | nil |
 
   ## Setup/Installation Requirements
 
